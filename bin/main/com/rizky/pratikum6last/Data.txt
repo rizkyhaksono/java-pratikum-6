@@ -1,0 +1,4 @@
+Nama Dosen | Mata Kuliah | GKB | Waktu | Ruangan
+pak_hardi | pbo | 121 | pagi | ruangan_baru
+pak_ari | mata_kuliah_pemrograman | 2 | sore | R404
+sdsd | sd | 4 | ds | sdds
