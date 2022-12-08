@@ -74,11 +74,11 @@ public class Mahasiswa extends Application {
     boolean functionDelete;
 
     // Table Column
-    private final TableColumn<DataMahasiswa, String> namadosenCol = new TableColumn("Nama Dosen");
-    private final TableColumn<DataMahasiswa, String> mapcol = new TableColumn("Mata Kuliah");
-    private final TableColumn<DataMahasiswa, String> gkbCol = new TableColumn("GKB");
-    private final TableColumn<DataMahasiswa, String> waktuCol = new TableColumn("Waktu");
-    private final TableColumn<DataMahasiswa, String> ruanganCol = new TableColumn("Ruangan");
+    private final TableColumn<DataMahasiswa, String> namadosenCol = new TableColumn<>("Nama Dosen");
+    private final TableColumn<DataMahasiswa, String> mapcol = new TableColumn<>("Mata Kuliah");
+    private final TableColumn<DataMahasiswa, String> gkbCol = new TableColumn<>("GKB");
+    private final TableColumn<DataMahasiswa, String> waktuCol = new TableColumn<>("Waktu");
+    private final TableColumn<DataMahasiswa, String> ruanganCol = new TableColumn<>("Ruangan");
 
     // Table View
     private final TableView<DataMahasiswa> tabel = new TableView<>();
@@ -148,8 +148,8 @@ public class Mahasiswa extends Application {
 
             Object[] ambil = read.lines().toArray();
 
-            for (int i = 0; i < ambil.length; i++) {
-                String baris = ambil[i].toString();
+            for (Object o : ambil) {
+                String baris = o.toString();
                 baris = baris.replace(" |", "");
                 String[] hasil = baris.split(" ");
 
@@ -317,14 +317,12 @@ public class Mahasiswa extends Application {
         });
     }
 
-    @SuppressWarnings("unchecked")
     // connect data to DataMahasiswa.java
     public void dataColumn() {
         namadosenCol.setCellValueFactory(new PropertyValueFactory<>("namaDosen"));
         namadosenCol.setPrefWidth(110);
 
-        mapcol.setCellValueFactory(new PropertyValueFactory<>("mape" +
-                "l"));
+        mapcol.setCellValueFactory(new PropertyValueFactory<>("mapel"));
         mapcol.setPrefWidth(100);
 
         gkbCol.setCellValueFactory(new PropertyValueFactory<>("GKB"));
