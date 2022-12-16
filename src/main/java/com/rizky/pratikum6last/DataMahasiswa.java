@@ -1,6 +1,5 @@
-package com.rizky.pratikum6last;
+package com.rizky.tugasbesar;
 
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class DataMahasiswa {
