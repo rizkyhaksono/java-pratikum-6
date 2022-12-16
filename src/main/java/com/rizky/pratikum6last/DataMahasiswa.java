@@ -1,7 +1,10 @@
-package com.rizky.tugasbesar;
+package com.rizky.pratikum6last;
 
 import javafx.beans.property.SimpleStringProperty;
 
+/**
+ * modeling data mahasiswa
+ */
 public class DataMahasiswa {
 
     private final SimpleStringProperty namaDosen;

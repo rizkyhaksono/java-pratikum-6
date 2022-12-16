@@ -19,6 +19,10 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
+/**
+ * Main class for the application
+ */
+
 public class Mahasiswa extends Application {
 
     private final BorderPane root = new BorderPane();
@@ -94,6 +98,10 @@ public class Mahasiswa extends Application {
     String inputNamaDosen, inputMatkul, inputGKB, inputWaktu, inputRuang;
     private BufferedReader read;
 
+    /**
+     * write data for table
+     */
+
     private void writeData() throws IOException {
 
         Writer writer = null;
@@ -139,6 +147,10 @@ public class Mahasiswa extends Application {
 
     }
 
+    /**
+     * read data for table
+     */
+
     private void readData() throws IOException {
 
         try {
@@ -172,6 +184,10 @@ public class Mahasiswa extends Application {
             read.close();
         }
     }
+
+    /**
+     * update data for table
+     */
 
     private void updateData() {
 
@@ -246,6 +262,9 @@ public class Mahasiswa extends Application {
 
     }
 
+    /**
+     * create data for table
+     */
     private void createData() {
 
         verticalBox.getChildren().remove(removeBox);
@@ -265,9 +284,17 @@ public class Mahasiswa extends Application {
 
             if (!addingData && !gkbBool){
                 err.setContentText("Inputan GKB harus angka");
+                System.out.println("Inputan GKB harus angka [" + gkbField.getText() + "]");
                 err.show();
             } else if (gkbBool || dosenBool || matkulBool || waktuBool || ruangBool) {
                 err.setContentText("Inputan tidak boleh kosong");
+                System.out.println("Inputan tidak boleh kosong ");
+                System.out.println("Jika tertanda true maka inputan kosong ");
+                System.out.println("Input GKB : " + gkbBool);
+                System.out.println("Input Dosen : " + dosenBool);
+                System.out.println("Input Matkul : " + matkulBool);
+                System.out.println("Input Waktu : " + waktuBool);
+                System.out.println("Input Ruangan : " + ruangBool);
                 err.show();
             } else {
                 data.add(new DataMahasiswa(
@@ -298,6 +325,10 @@ public class Mahasiswa extends Application {
 
         });
     }
+
+    /**
+     * delete data for table
+     */
 
     private void deleteData() {
 
@@ -520,11 +551,14 @@ public class Mahasiswa extends Application {
             Scene scene = new Scene(root, 600, 600);
             stage.setScene(scene);
 
-            stage.setTitle("Aplikasi Jadwal Kuliah Keren Banget");
+            stage.setTitle("Aplikasi Jadwal Mata Kuliah");
             stage.show();
 
     }
 
+    /**
+     * main method for launch scene
+     */
     public static void main(String[] args) {
         launch(args);
     }
