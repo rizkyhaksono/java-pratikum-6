@@ -1,4 +1,4 @@
-# java-pratikum-6
+# Java Praktikum 6
 
 MIT License
 
