@@ -24,4 +24,4 @@ SOFTWARE.
 
 ## Author
 
-[rizkyhaksono](https://github.com/rizkyhaksono.com)
+[rizkyhaksono](https://github.com/rizkyhaksono.com) <3
